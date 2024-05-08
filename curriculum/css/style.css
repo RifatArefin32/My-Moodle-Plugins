@@ -1,0 +1,27 @@
+/* 
+
+
+
+ */
+.show-courses-table-div{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+.show-courses-table{
+    width: 100%;
+}
+.show-courses {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+ }
+.show-courses-data {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    width: 100%;
+}
+.show-courses-btn{
+    width: max-content;
+}

@@ -24,7 +24,19 @@
 
 <h3>{{mytext}}</h3>
 <hr>
-{{#category}}
-    <a class="btn btn-primary" href="{{myurl}}?id={{id}}">{{name}} </a>
-{{/category}}
+<div class="show-courses-table-div">
+<table class="show-courses-table">
+  <tbody>
+    {{#category}}
+        <tr class="show-courses">
+            <td class="show-courses-data">{{name}}</td>
+            <td class="show-courses-data"><a class="btn btn-secondary show-courses-btn" href="{{myurl2}}?categoryid={{id}}"> Show courses </a></td>
+            <td class="show-courses-data"><a class="btn btn-primary show-courses-btn" href="{{myurl}}?id={{id}}"> Add courses </a></td>
+        </tr>
+    {{/category}}
+    </tbody>
+</table>
+
+</div>
 <hr>
+<a class="btn btn-primary" href="{{myurl3}}"> Add new curriculum </a>

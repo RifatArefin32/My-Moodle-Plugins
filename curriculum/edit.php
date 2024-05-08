@@ -10,6 +10,10 @@
 require_once(__DIR__ . '/../../config.php');
 require_once($CFG->dirroot . '/local/curriculum/classes/form/edit.php');
 
+//This snippet is the part of Purge_caches
+// define('CLI_SCRIPT', true);
+// require_once($CFG->libdir.'/clilib.php');
+
 $PAGE->set_url(new moodle_url('/local/curriculum/edit.php'));
 $PAGE->set_context(\context_system::instance());
 $PAGE->set_title('Edit Curriculum');
@@ -77,6 +81,8 @@ if ($mform->is_cancelled()) {
             $sql = $DB->update_record('course', $up_course);
         }
     }
+    // //purge caches before redirect
+    // cli_purge_caches();
     redirect($CFG->wwwroot . '/local/curriculum/manage.php', get_string('crs_added', 'local_curriculum'));
 
 } else {
@@ -86,11 +92,3 @@ if ($mform->is_cancelled()) {
 }
 
 
-
-
-
-
-// You should really redirect before you start page output
-// line 1345 of \lib\outputrenderers.php: call to debugging()
-// line 3128 of \lib\weblib.php: call to core_renderer->redirect_message()
-// line 32 of \local\curriculum\edit.php: call to redirect()

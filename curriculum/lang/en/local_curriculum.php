@@ -23,6 +23,6 @@
  */
 
 $string['av_curr'] = 'No curriculum currently avalilable';
-$string['all_av_curr'] = 'All available curriculums | Click the curriculum to add courses';
+$string['all_av_curr'] = 'All available curriculums';
 $string['no_crs_added'] = 'No course has been added';
 $string['crs_added'] = 'Courses are added successfully';
