@@ -22,8 +22,6 @@ global $DB;
 $sql = "SELECT * FROM {course} WHERE id != 1";
 $courses = $DB->get_records_sql($sql);
 
-
-//var_dump($courses);
 global $DB, $OUTPUT;
 $catId=optional_param('id',0,PARAM_INT); //course ID
 
