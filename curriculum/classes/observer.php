@@ -22,21 +22,18 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace local_curriculum\observer;
  defined('MOODLE_INTERNAL') || die();
 
-
- use core\event\course_completed;
- 
  class local_curriculum_observer {
-     /**
-      * Event observer for course completion.
-      * @param \core\event\course_completed $event
-      */
-     public static function on_course_completed(course_completed $event) {
-         // You can perform actions here when a course is completed.
-         // For example, auto-enrollment of users into another course.
-         var_dump("Course is Finished!");
+     public static function on_course_completed(\core\event\course_completed $event) {
+         $data= $event->get_data();
+         var_dump($data);
      }
+
+     public static function user_created(\core\event\user_created $event) {
+        $data= $event->get_data();
+        var_dump($data);
+        die;
+    }
  }
  
