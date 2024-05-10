@@ -15,17 +15,28 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'local_curriculum', language 'en'
+ * Version details.
  *
  * @package   local_curriculum
  * @copyright 2024 Rifat Arefin
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname']= "Curriculam Setter";
-$string['av_curr'] = 'No curriculum currently avalilable';
-$string['all_av_curr'] = 'All available curriculums';
-$string['no_crs_added'] = 'No course has been added';
-$string['crs_added'] = 'Courses are added successfully';
-$string['av_crs'] = 'No course currently avalilable';
-$string['all_av_crs'] = 'All available courses';
+namespace local_curriculum\observer;
+ defined('MOODLE_INTERNAL') || die();
+
+
+ use core\event\course_completed;
+ 
+ class local_curriculum_observer {
+     /**
+      * Event observer for course completion.
+      * @param \core\event\course_completed $event
+      */
+     public static function on_course_completed(course_completed $event) {
+         // You can perform actions here when a course is completed.
+         // For example, auto-enrollment of users into another course.
+         var_dump("Course is Finished!");
+     }
+ }
+ 
