@@ -25,15 +25,25 @@
  defined('MOODLE_INTERNAL') || die();
 
  class local_curriculum_observer {
-     public static function on_course_completed(\core\event\course_completed $event) {
+     public static function custom_course_complete(\core\event\course_completed $event) {
          $data= $event->get_data();
-         var_dump($data);
+        //  var_dump(json_encode($data));
+        //  die;
+     
+        //update the course count of the current category
+        $up_track_course = new stdClass();
+        $up_track_course->user_id= $data->userid;
+        $up_track_course->course_id =  $data->courseid;
+        $up_track_course->complete =  1;
+        $sql = $DB->update_record('track_courses', $up_track_course);
+
+        echo "gkabkgb: $data->userid <br> $data->courseid";
      }
 
      public static function user_created(\core\event\user_created $event) {
         $data= $event->get_data();
         var_dump($data);
-        die;
+        // die;
     }
  }
  

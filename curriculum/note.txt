@@ -1,0 +1,60 @@
+sudo service apache2 restart
+sudo service php8.3-fpm restart
+
+***
+To work on course_list.php:
+	- First look at the category id
+	
+string(353) "{"eventname":"\\core\\event\\course_completed","component":"core","action":"completed","target":"course","objecttable":"course_completions","objectid":"9","crud":"u","edulevel":2,"contextid":27,"contextlevel":50,"contextinstanceid":"3","userid":"2","courseid":"3","relateduserid":"5","anonymous":0,"other":{"relateduserid":"5"},"timecreated":1715671381}"
+Default exception handler: Coding error detected, it must be fixed by a programmer: A lock was created but not released at:
+[dirroot]/lib/classes/cron.php on line 189
+
+
+
+{
+"eventname":"\\core\\event\\course_completed",
+"component":"core",
+"action":"completed",
+"target":"course",
+"objecttable":"course_completions",
+"objectid":"9",
+"crud":"u",
+"edulevel":2,
+"contextid":27,
+"contextlevel":50,
+"contextinstanceid":"3",
+"userid":"2",
+"courseid":"3",
+"relateduserid":"5",
+"anonymous":0,
+"other":{
+"relateduserid":"5"
+},
+"timecreated":1715671381
+}
+{
+"eventname":"\core\event\course_completed",
+"component":"core",
+"action":"completed",
+"target":"course",
+"objecttable":"course_completions",
+"objectid":"9",
+"crud":"u",
+"edulevel":2,
+"contextid":27,
+"contextlevel":50,
+
+"contextinstanceid":"3", 
+"userid":"2",
+"courseid":"3",
+
+"relateduserid":"5",
+"anonymous":0,
+"other":{
+"relateduserid":"5"
+},
+"timecreated":1715671381
+}
+
+
+UNDER CONSTRUCTION************ @classes/form/observer.php
