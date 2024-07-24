@@ -12,7 +12,7 @@
     - Admin can add courses and show courses to the corresponding category.
 
 3. lib.php:
-    - Used for creating functions
+    - Used for writing functions
 
 4. edit.php:
     - Redirected from manage.php on action of "Add courses" button  
